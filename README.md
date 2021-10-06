@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://sebastianbr11.github.io/csb-xi167/](https://sebastianbr11.github.io/csb-xi167/)
 
 ## My process
 
@@ -48,19 +47,9 @@ Users should be able to:
 
 ### What I learned
 
-To dynamically import svg files in svelte I needed to install the rollup-plugin-inline-svg plugin,
-then I created an Icon component which takes a name prop and then imports the svg inside an each block.
-
-```js
-const getIcon = async () => {
-  const icon = await import(`../public/images/icon-${name}.svg`);
-  return icon.default;
-};
-```
-
-```html
-{#await getIcon() then svg} {@html svg} {/await}
-```
+To import the svg icons I made a svelte file for each icon and used the rollup-plugin-inline-svg node package to use them.
+Then I made an IconType component which had an object with key value pairs of icon name and icon component, and used that object
+with a prop called name with which I then displayed the correct icon with svelte:component.
 
 ### Useful resources
 
@@ -68,4 +57,4 @@ const getIcon = async () => {
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/SebastianBr11)
+- Frontend Mentor - [@SebastianBr11](https://www.frontendmentor.io/profile/SebastianBr11)
